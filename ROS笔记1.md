@@ -6,29 +6,25 @@
 1. 新建一个名为ros_test的文件夹，并在其中新建一个名为src的文件夹
 2. 执行下列代码：<br>
 <code>cd ros_test<br>catkin_make
-</code><br>
-以创建工作空间
+</code>以创建工作空间
 3. 执行下列代码：<br>
 <code>cd ros_test<br>code .
-</code><br>
-以在此目录下打开vscode
+</code>以在此目录下打开vscode
 4. ctrl+shift+B在vscode中进行ros系统编译
 5. 在vscode文件目录中选定ros_test下的src右键选择create catkin package进行新建功能包，选择功能包名称并添加依赖。其中，基本依赖有roscpp，rospy，std_msgs等
 6. 在功能包中新建scripts文件夹并在其中编写python文件（cpp文件放在功能包src中）
-7. 配置Cmake文件：<br><code>
+7. 配置Cmake文件：<code>
 catkin_install_python(PROGRAMS scripts/自定义文件名.py<br>
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )</code><br>
 需要将这段代码的自定义文件名.py改为你需要使用的文件，可以写好几个scripts/xx.py
 8. 给python文件添加可执行权限，指令如下<br>
 <code>cd ros_test/demo/scripts<br>
-chmod +x *.py
-</code><br>
+chmod +x *.py</code>
 9. 再次ctrl+shift+B在vscode中进行ros系统编译
 10. 启动roscore，使用vscode则会自动启动
 11. 声明环节变量文件，指令如下：<br>
-<code>source ./devel/setup.bash
-</code><br>
+<code>source ./devel/setup.bash</code>
 12. 使用rosrun或者roslaunch运行程序
 ## 【2】ROS节点通信
 * **话题通信**
@@ -130,11 +126,9 @@ sys.path.insert(0,path + "/src/功能包名称/scripts")</code>把参考路径�
 2. 修改不同计算机的<code>/etc/hosts</code> 文件，在该文件中加入其他设备的IP地址和设备名（设备名可以使用hostname指令查看），之后最好进行设备重启；使用<code>ping ip</code>或<code>ping 设备名</code>可以测试通信是否正常
 3. bashrc文件中配置主从机ip，启动roscore的设备是主机；<br>
 主机在bashrc中添加<code>export ROS_MASTER_URI=http://~~主机IP~~:11311<br>
-export ROS_HOSTNAME=~~主机IP~~
-</code><br>
+export ROS_HOSTNAME=~~主机IP~~</code><br>
 从机在bashrc中添加<code>export ROS_MASTER_URI=http://~~主机IP~~:11311<br>
-export ROS_HOSTNAME=~~从机IP~~
-</code><br>
+export ROS_HOSTNAME=~~从机IP~~</code>
 4. 在主机启动roscore，进行通信测试即可
 ## 【5】ROS常用组件
 * **TF坐标变换**
