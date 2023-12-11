@@ -7,7 +7,7 @@ l=2\pi r \\
 x=y+z
 \end{cases}$$
 > <code>$$\begin{cases}
-l=2\pi r \\ 
+l=2\pi r \\  
 x=y+z
 \end{cases}$$</code>
 (在多行公式中使用\\换行)
