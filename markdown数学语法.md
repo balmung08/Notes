@@ -12,7 +12,7 @@ x=y+z
 \end{cases}$$</code>
 (在多行公式中使用\\换行)
 * 公式组合：
-
+ 
 $$D(x)= \begin{cases}
 \lim\limits_{x \to 0} \frac{a^x}{b+c} & x<3 \\ 
 \int_a^{3b}x_{ij}+e^2 \mathrm{d}x & x>3\\
